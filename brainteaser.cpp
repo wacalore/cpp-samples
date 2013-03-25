@@ -1,7 +1,15 @@
 #include <iostream>
 
-using namespace std;
+/* This is a solution to a C++ logic brain teaser.
+ 
+   The problem is to find the optimal number of moves required to go from '1' to '2' in a three-story maze.
+   An example maze is included below. 'o' represents an unreachable space. '.' is a reachable space that
+   can also be used to drop to the "floor" below. The problem is solved using a template function that will
+   allow for an arbitrary size of the floor mazes.   
+*/
 
+
+using namespace std;
 
 char floor3[3][4] =
 {
@@ -114,6 +122,6 @@ template <size_t n, size_t size_y> int findPrincess(int x, int y, char (&floor)[
 
 int main()
 {
-    cout << "Found Princess in : " << findPrincess(0, 0, floor3) << " seconds." << endl;
+    cout << "Reached end in : " << findPrincess(0, 0, floor3) << " seconds." << endl;
     return 0;
 }
